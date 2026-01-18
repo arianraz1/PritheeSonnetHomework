@@ -3,20 +3,21 @@ import java.util.Random;
 
 public class Main {
     static final int MAX_ATTEMPTS = 3;
-    static String sonnet = "Two households, both alike in dignity,\n" +
-            "In fair Verona, where we lay our scene,\n" +
-            "From ancient grudge break to new mutiny,\n" +
-            "Where civil blood makes civil hands unclean.\n" +
-            "From forth the fatal loins of these two foes\n" +
-            "A pair of star-cross’d lovers take their life;\n" +
-            "Whose misadventured piteous overthrows\n" +
-            "Do with their death bury their parents’ strife.\n" +
-            "The fearful passage of their death-mark’d love,\n" +
-            "And the continuance of their parents’ rage,\n" +
-            "Which, but their children’s end, nought could remove,\n" +
-            "Is now the two hours’ traffic of our stage;\n" +
-            "The which if you with patient ears attend,\n" +
-            "What here shall miss, our toil shall strive to mend.\n";
+    static String sonnet =
+            "Two households, both alike in dignity, \n" +
+            "In fair Verona, where we lay our scene, \n" +
+            "From ancient grudge break to new mutiny, \n" +
+            "Where civil blood makes civil hands unclean. \n" +
+            "From forth the fatal loins of these two foes \n" +
+            "A pair of star-cross’d lovers take their life; \n" +
+            "Whose misadventured piteous overthrows \n" +
+            "Do with their death bury their parents’ strife. \n" +
+            "The fearful passage of their death-mark’d love, \n" +
+            "And the continuance of their parents’ rage, \n" +
+            "Which, but their children’s end, nought could remove, \n" +
+            "Is now the two hours’ traffic of our stage; \n" +
+            "The which if you with patient ears attend, \n" +
+            "What here shall miss, our toil shall strive to mend. \n";
 
     public static void main(String[] args) {
         int numCorrect = 0;
@@ -35,6 +36,7 @@ public class Main {
             if (length == 1) {
                 wordIndex = 0;
             } else {
+                // Ensure the same word is not chosen twice in a row
                 do {
                     wordIndex = rand.nextInt(length);
                 } while (wordIndex == lastIndex);

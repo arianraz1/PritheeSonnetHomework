@@ -1,6 +1,11 @@
 import static java.lang.Character.isAlphabetic;
 import static java.lang.Character.isDigit;
 
+/**
+ * Represents a word-based guessing view over a sonnet.
+ * A word is described as the following: a sequence of alphabetic characters, digits, or apostrophes.
+ */
+
 public class SonnetPlayer {
     private String sonnet;
     private String[] sonnetArray;
@@ -42,7 +47,7 @@ public class SonnetPlayer {
             if (isWordChar(c)) {
                 sb.append("_");
             } else {
-                break;
+                sb.append(word.charAt(i));
             }
         }
 
@@ -56,8 +61,6 @@ public class SonnetPlayer {
             char c = word.charAt(i);
             if (isWordChar(c)) {
                 sb.append(c);
-            } else {
-                break;
             }
         }
 
