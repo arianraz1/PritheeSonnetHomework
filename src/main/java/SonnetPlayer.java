@@ -47,7 +47,7 @@ public class SonnetPlayer {
             if (isWordChar(c)) {
                 sb.append("_");
             } else {
-                sb.append(word.charAt(i));
+                sb.append(c);
             }
         }
 
